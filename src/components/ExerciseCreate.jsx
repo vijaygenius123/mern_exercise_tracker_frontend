@@ -20,8 +20,12 @@ const ExerciseCreate = () => {
         axios.get(`${process.env.REACT_APP_API_BASE}/users`)
             .then(resp => {
                 setUsers(resp.data)
+                setExercise({
+                    ...exercise,
+                    username: resp.data[0].username
+                })
             })
-    }, [])
+    }, [exercise])
 
     const handleChange = e => {
         setExercise({
