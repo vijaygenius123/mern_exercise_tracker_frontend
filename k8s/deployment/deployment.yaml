@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: vijaygenius123/exercise-tracker-frontend
+        - image: vijaygenius123/exercise-tracker-frontend:prod
           imagePullPolicy: Always
           name: backend
           ports:
